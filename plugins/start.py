@@ -41,7 +41,7 @@ async def start(client, message):
         await checkdb.add_user(message.from_user.id, message.from_user.first_name)
         return await message.reply("<b>Congratulations 🎉\n\nYour Account Created Successfully.\n\nFor Uploading File In Quality Option Use Command /quality\n\nMore Commands Are /account and /update and /withdraw\n\nFor Without Quality Option Direct Send File To Bot.</b>")
     else:
-        rm = InlineKeyboardMarkup([[InlineKeyboardButton("✨ Update Channel", url="https://t.me/VJ_Disk")]])
+        rm = InlineKeyboardMarkup([[InlineKeyboardButton("✨ Update Channel", url="https://t.me/sk_entertains")]])
         await client.send_message(
             chat_id=message.from_user.id,
             text=script.START_TXT.format(message.from_user.mention),
@@ -77,7 +77,7 @@ async def stream_start(client, message):
     params = {'u': user_id, 'w': str(log_msg.id), 's': str(0), 't': str(0)}
     url1 = f"{urlencode(params)}"
     link = await encode(url1)
-    encoded_url = f"{LINK_URL}?Tech_VJ={link}"
+    encoded_url = f"{LINK_URL}?Lakki={link}"
     rm=InlineKeyboardMarkup([[InlineKeyboardButton("🖇️ Open Link", url=encoded_url)]])
     await message.reply_text(text=f"<code>{encoded_url}</code>", reply_markup=rm)
 
@@ -189,7 +189,7 @@ async def quality_link(client, message):
     params = {'u': message.from_user.id, 'w': first_id, 's': second_id, 't': third_id}
     url1 = f"{urlencode(params)}"
     link = await encode(url1)
-    encoded_url = f"{LINK_URL}?Tech_VJ={link}"
+    encoded_url = f"{LINK_URL}?Lakki={link}"
     rm=InlineKeyboardMarkup([[InlineKeyboardButton("🖇️ Open Link", url=encoded_url)]])
     await message.reply_text(text=f"<code>{encoded_url}</code>", reply_markup=rm)
 
@@ -197,7 +197,7 @@ async def quality_link(client, message):
 async def link_start(client, message):
     if not message.text.startswith(LINK_URL):
         return
-    link_part = message.text[len(LINK_URL + "?Tech_VJ="):].strip()
+    link_part = message.text[len(LINK_URL + "?Lakki="):].strip()
     try:
         original = await decode(link_part)
     except:
