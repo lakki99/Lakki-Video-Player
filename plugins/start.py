@@ -6,7 +6,7 @@ from Script import script
 from pyrogram import Client, filters, enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ForceReply, CallbackQuery
 from info import LOG_CHANNEL, LINK_URL, ADMIN
-from plugins.database import checkdb, db, get_count, get_withdraw, record_withdraw, record_visit
+from plugins.database import checkdb, db, get_count, get_withdraw, record_withdraw, record_visits
 from urllib.parse import quote_plus, urlencode
 from TechVJ.util.file_properties import get_name, get_hash, get_media_file_size
 from TechVJ.util.human_readable import humanbytes
