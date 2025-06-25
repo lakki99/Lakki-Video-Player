@@ -6,7 +6,7 @@ from Script import script
 from pyrogram import Client, filters, enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ForceReply, CallbackQuery
 from info import LOG_CHANNEL, LINK_URL, ADMIN
-from plugins.database import checkdb, db, get_count, get_withdraw, record_withdraw, record_visits
+from plugins.database import checkdb, db, get_count, get_withdraw, record_withdraw, record_visit
 from urllib.parse import quote_plus, urlencode
 from TechVJ.util.file_properties import get_name, get_hash, get_media_file_size
 from TechVJ.util.human_readable import humanbytes
@@ -298,13 +298,13 @@ async def show_notify(client, message):
     if int(user_id.text):
         sub = await client.ask(message.from_user.id, "Payment Is Cancelled Or Send Successfully. /send or /cancel")
         if sub.text == "/send":
-            record_visits(user_id.text, count)
+            record_visit(user_id.text, count)
             record_withdraw(user_id.text, False)
             await client.send_message(user_id.text, "Your Withdrawal Is Successfully Completed And Sended To Your Bank Account.")
         else:
             reason = await client.ask(message.from_user.id, "Send Me The Reason For Cancellation Of Payment")
             if reason.text:
-                record_visits(user_id.text, count)
+                record_visit(user_id.text, count)
                 record_withdraw(user_id.text, False)
                 await client.send_message(user_id.text, f"Your Payment Cancelled - {reason.text}")
     await message.reply("Successfully Message Send.")
