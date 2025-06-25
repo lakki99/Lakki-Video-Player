@@ -8,14 +8,14 @@ class script(object):
     
 ✏️ I Am Video Player Bot, I Stream File On Website And Earn Unlimited Money 💰.
 
-Send Me Any VJDisk Link Or Any File To See My Power.✨
+Send Me Any Lakki Disk Link Or Any File To See My Power.✨
 
 For Uploading File In Quality Option Use Command /quality
 
 More Commands Are /account , /update and /withdraw</b>"""
     
     RESTART_TXT = """
-<b>Bᴏᴛ Rᴇsᴛᴀʀᴛᴇᴅ !
+<b>Broo 🥲 !
 
 📅 Dᴀᴛᴇ : <code>{}</code>
 ⏰ Tɪᴍᴇ : <code>{}</code>
